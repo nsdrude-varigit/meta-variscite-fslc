@@ -1,6 +1,0 @@
-#!/bin/sh
-
-if [ -f "/sys/class/vtconsole/vtcon1/bind" ]; then
-	# detach framebuffer console from console layer
-	echo 0 > /sys/class/vtconsole/vtcon1/bind
-fi
