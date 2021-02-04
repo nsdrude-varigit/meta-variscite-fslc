@@ -46,6 +46,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
 	screen \
 	tcf-agent \
 	openssh-sftp-server \
+	spidev-test \
 "
 
 # only for Android enabled machines
