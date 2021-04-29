@@ -1,0 +1,37 @@
+From e6852e091d35585e0dcb52b472b765b137d0160c Mon Sep 17 00:00:00 2001
+From: Nate Drude <nate.d@variscite.com>
+Date: Thu, 29 Apr 2021 11:54:29 -0500
+Subject: [PATCH] wayland: remove panel from window height
+
+Signed-off-by: Nate Drude <nate.d@variscite.com>
+---
+ ext/wayland/wlutils.c  | 2 +-
+ ext/wayland/wlwindow.c | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/ext/wayland/wlutils.c b/ext/wayland/wlutils.c
+index a4d4399a3..841995416 100644
+--- a/ext/wayland/wlutils.c
++++ b/ext/wayland/wlutils.c
+@@ -131,7 +131,7 @@ gst_wl_init_surface_state(GstWlDisplay * display, GstWlWindow * window)
+             goto out;
+         }
+         window->fullscreen_width = desktop_width;
+-        window->fullscreen_height = desktop_height - PANEL_HEIGH;
++        window->fullscreen_height = desktop_height;
+     } else {
+         ret = FALSE;
+         goto out;
+diff --git a/ext/wayland/wlwindow.c b/ext/wayland/wlwindow.c
+index fd1b40b38..9a6d0085f 100644
+--- a/ext/wayland/wlwindow.c
++++ b/ext/wayland/wlwindow.c
+@@ -430,7 +430,7 @@ gst_wl_window_new_internal (GstWlDisplay * display, GMutex * render_lock)
+ 
+   if (!gst_wl_init_surface_state(display, window)) {
+     window->fullscreen_width = display->width;
+-    window->fullscreen_height = display->height - PANEL_HEIGH;
++    window->fullscreen_height = display->height;
+     window->scale = 1;
+     GST_WARNING ("init surface_state fail, fallback to scale=%d fullscreen (%dx%d)",
+                 window->scale,
