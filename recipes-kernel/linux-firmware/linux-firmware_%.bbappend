@@ -8,8 +8,8 @@ BRCM_REV = "8.5.0.7"
 SRC_URI[brcm_lwb.sha256sum] = "5a607bc3ca8cea619eae03efa2def406b813603751ffaf3c57c43d7874b4b34e"
 SRC_URI[brcm_lwb5.sha256sum] = "221f1a552eb8d273fd0e169da873eb8a9610edc836ae2b026ebd4e7f82f4ffa2"
 
-# TI WiFi FW 8.9.0.0.86 and BT FW 4.5
-SRCREV_tiwlan = "5ec05007f2662f460f881c5868311fd3ab7e6e71"
+# TI WiFi FW 8.9.0.0.88 and BT FW 4.5
+SRCREV_tiwlan = "bda5304cc86e9c4029f8101394d2a8b39c640f53"
 BRANCH_tiwlan = "master"
 SRCREV_tibt = "6c9104f0fb7ca1bfb663c61e9ea599b3eafbee67"
 BRANCH_tibt = "master"
