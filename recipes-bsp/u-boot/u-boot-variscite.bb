@@ -3,6 +3,7 @@
 # Copyright 2018-2019 Variscite Ltd.
 
 SUMMARY = "U-Boot for Variscite's i.MX boards"
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 require recipes-bsp/u-boot/u-boot.inc
 
 PROVIDES += "u-boot"
@@ -18,6 +19,7 @@ LOCALVERSION ?= "-${SRCBRANCH}"
 BOOT_TOOLS = "imx-boot-tools"
 
 SRC_URI += "file://fw_env.config"
+SRC_URI_append_hab += "file://u-boot-hab.cfg"
 
 UBOOT_INITIAL_ENV = "u-boot-initial-env"
 
