@@ -47,6 +47,7 @@ CORE_IMAGE_EXTRA_INSTALL += " \
 	openssh-sftp-server \
 	libgpiod \
 	libgpiod-tools \
+	nxp-nfc-bin \
 "
 
 # only for Android enabled machines
